@@ -15,6 +15,7 @@
     "babel-preset-power-assert": "3.0.0",
     "cross-env": "6.0.3",
     "jest": "24.9.0",
+    "np": "5.2.1",
     "power-assert": "1.6.1",
     "terser": "4.6.3",
     "typescript": "3.7.5"

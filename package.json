@@ -13,15 +13,21 @@
     "@types/power-assert": "1.5.3",
     "babel-jest": "24.9.0",
     "babel-preset-power-assert": "3.0.0",
+    "cross-env": "6.0.3",
     "jest": "24.9.0",
     "power-assert": "1.6.1",
+    "terser": "4.6.3",
     "typescript": "3.7.5"
   },
-  "types": "dist/types/either.d.ts",
   "license": "WTFPL",
-  "main": "index.js",
+  "main": "dist/either.js",
+  "module": "dist/either.js",
   "scripts": {
-    "test": "jest --runInBand",
-    "build": "tsc --emitDeclarationOnly"
-  }
+    "build": "rm -rf dist/ && yarn build:types && yarn build:module && yarn minify",
+    "minify": "terser dist/either.js --compress --source-map --mangle --output dist/either.js",
+    "build:module": "cross-env NODE_ENV=production babel either.ts --out-dir dist --extensions '.ts'",
+    "build:types": "tsc --emitDeclarationOnly",
+    "test": "jest --runInBand"
+  },
+  "types": "dist/types/either.d.ts"
 }

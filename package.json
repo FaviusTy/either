@@ -17,9 +17,11 @@
     "power-assert": "1.6.1",
     "typescript": "3.7.5"
   },
+  "types": "dist/types/either.d.ts",
   "license": "WTFPL",
   "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "build": "tsc --emitDeclarationOnly"
   }
 }

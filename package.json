@@ -1,6 +1,6 @@
 {
   "name": "@favi_ty/either",
-  "version": "1.0.0",
+  "version": "1.0.0-pre",
   "author": "favi_ty <favius983@gmail.com>",
   "devDependencies": {
     "@babel/cli": "7.8.3",
@@ -23,11 +23,14 @@
   "license": "WTFPL",
   "main": "dist/either.js",
   "module": "dist/either.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "rm -rf dist/ && yarn build:types && yarn build:module && yarn minify",
-    "minify": "terser dist/either.js --compress --source-map --mangle --output dist/either.js",
     "build:module": "cross-env NODE_ENV=production babel either.ts --out-dir dist --extensions '.ts'",
     "build:types": "tsc --emitDeclarationOnly",
+    "minify": "terser dist/either.js --compress --source-map --mangle --output dist/either.js",
     "test": "jest --runInBand"
   },
   "types": "dist/types/either.d.ts"

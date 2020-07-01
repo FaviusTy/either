@@ -17,7 +17,7 @@
     "jest": "25.1.0",
     "np": "5.2.1",
     "power-assert": "1.6.1",
-    "terser": "4.6.3",
+    "terser": "4.8.0",
     "typescript": "3.7.5"
   },
   "license": "WTFPL",

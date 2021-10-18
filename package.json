@@ -18,7 +18,7 @@
     "np": "5.2.1",
     "power-assert": "1.6.1",
     "terser": "4.6.3",
-    "typescript": "3.7.5"
+    "typescript": "3.9.10"
   },
   "license": "WTFPL",
   "main": "dist/either.js",
